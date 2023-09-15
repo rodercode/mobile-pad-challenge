@@ -1,3 +1,5 @@
+
+
 /* ./src/index.css */
 @tailwind base;
 @tailwind components;
@@ -9,7 +11,7 @@
     @apply text-gray-color-base font-Poppins;
   }
   h1 {
-    @apply text-3xl font-bold leading-tight;
+    @apply text-3xl font-bold leading-snug;
   }
   h2 {
     @apply text-2xl font-semibold;

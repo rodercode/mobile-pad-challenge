@@ -4,7 +4,7 @@
     <!-- HEADER -->
     <header class="mb-8">
       <!-- PHONE NUMBER -->
-      <h1 class="text-3xl text-center">{{ phoneNumber }}</h1>
+      <h1 class="h-8 text-3xl text-center">{{ phoneNumber }}</h1>
 
       <!-- FULLNAME  -->
       <p class="text-lg text-center">Larry Black</p>
@@ -21,7 +21,7 @@
       />
 
       <!-- BTN ASTERISK -->
-      <ButtonIcon>
+      <ButtonIcon @click="updatePhoneNumber('*')">
         <IconAsterisk />
       </ButtonIcon>
 
@@ -29,7 +29,7 @@
       <ButtonNumber v-on:set-number="updatePhoneNumber" name="0" />
 
       <!-- BTN HASH -->
-      <ButtonIcon>
+      <ButtonIcon @click="updatePhoneNumber('#')">
         <IconHash />
       </ButtonIcon>
 

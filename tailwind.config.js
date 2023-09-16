@@ -15,9 +15,9 @@ module.exports = {
     extend: {
       colors: {
         // PRIMARY COLORS
-        "primary-color-dark": "#00526E",
-        "primary-color-base": "#00668A",
-        "primary-color-light": "#3385A1",
+        "primary-color-dark": "#35B5C5",
+        "primary-color-base": "#3bc9db",
+        "primary-color-light": "#4FCEDF",
 
         // SECONDARY COLORS
         "secondary-color-dark": "#C84242",
@@ -28,27 +28,32 @@ module.exports = {
         "gray-color-dark": "#3A4046",
         "gray-color-base": "#495057",
         "gray-color-light": "#6D7379",
+
+        "background-theme-color": "#20c997",
       },
-      borderWidth:{
-        '1': '1px',
+      borderWidth: {
+        1: "1px",
       },
       lineHeight: {
-        'xl-relaxed': '1.725',
+        "xl-relaxed": "1.725",
         "xl-loose": "2.5",
       },
-    fontFamily: {
-      Roboto: ["Roboto", "sans-serif"],
-      Inter: ["Inter", "sans-serif"],
-      Poppins: ["Poppins", "sans-serif"],
+      maxWidth: {
+        "xxs": "290px",
+      },
+      fontFamily: {
+        Roboto: ["Roboto", "sans-serif"],
+        Inter: ["Inter", "sans-serif"],
+        Poppins: ["Poppins", "sans-serif"],
+      },
+      container: {
+        center: true,
+        padding: "2rem",
+      },
     },
-    container: {
-      center: true,
-      padding: "2rem",
+    variants: {
+      extend: {},
     },
+    plugins: [],
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-}
-}
+};

@@ -1,5 +1,7 @@
 <template>
-  <RouterView />
+  <div class="flex items-center h-screen bg-background-theme-color">
+    <RouterView />
+  </div>
 </template>
 
 <script lang="ts">

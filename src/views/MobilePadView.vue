@@ -1,6 +1,6 @@
 <template>
   <!-- HOME -->
-  <div class="px-10 py-12">
+  <main class="py-12 m-auto bg-white home">
     <!-- HEADER -->
     <header class="mb-8">
       <!-- PHONE NUMBER -->
@@ -11,7 +11,7 @@
     </header>
 
     <!-- GRID CONTAINER -->
-    <main class="grid-container">
+    <div class="m-auto max-w-xxs grid-container">
       <!-- BTN NUMBERS 1-9 -->
       <ButtonNumber v-for="number in numbers" :key="number" :name="number" />
 
@@ -22,8 +22,8 @@
       <ButtonAdd />
       <ButtonCall />
       <ButtonBackSpace />
-    </main>
-  </div>
+    </div>
+  </main>
 </template>
 
 <script lang="ts">
@@ -56,6 +56,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.home {
+  flex-basis: 375px;
+}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, auto);

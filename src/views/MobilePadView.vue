@@ -34,7 +34,7 @@
       </ButtonIcon>
 
       <!-- BTN PLUS -->
-      <button class="border-none">+</button>
+      <button class="text-5xl border-none">+</button>
       <!-- BTN CALL -->
       <button
         class="text-white border-none bg-secondary-color-base hover:bg-secondary-color-light"
@@ -77,7 +77,7 @@ export default defineComponent({
   },
   data() {
     return {
-      numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      numbers: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
       phoneNumber: "",
     };
   },

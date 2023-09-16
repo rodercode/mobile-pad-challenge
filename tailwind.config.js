@@ -20,16 +20,15 @@ module.exports = {
         "primary-color-light": "#47A4F2",
 
         // SECONDARY COLORS
-        "secondary-color-dark": "#C84242",
-        "secondary-color-base": "#fa5252",
-        "secondary-color-light": "#FB7575",
+        "secondary-color-dark": "#1AA179",
+        "secondary-color-base": "#20c997",
+        "secondary-color-light": "#4DD4AC",
 
         // GREY COLORS
         "gray-color-dark": "#3A4046",
         "gray-color-base": "#495057",
         "gray-color-light": "#6D7379",
 
-        "background-theme-color": "#20c997",
       },
       borderWidth: {
         1: "1px",

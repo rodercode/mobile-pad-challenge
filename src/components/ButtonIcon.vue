@@ -1,7 +1,5 @@
 <template>
-  <button
-    class="w-20 h-20 text-3xl border-black rounded-full btn-icon place-items-center border-1"
-  >
+  <button class="w-20 h-20 text-3xl duration-500 rounded-full border-primary-color-light hover:bg-primary-color-base w-29 btn-icon border-1 hover:text-white">
     <slot></slot>
   </button>
 </template>

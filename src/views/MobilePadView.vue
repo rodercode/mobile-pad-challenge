@@ -27,6 +27,18 @@
       <ButtonIcon>
         <IconHash />
       </ButtonIcon>
+
+      <button
+        class="w-20 h-20 text-3xl duration-500 border-none rounded-full hover:bg-primary-color-base w-29 btn-icon border-1 hover:text-white"
+      >
+        +
+      </button>
+
+      <button
+        class="w-20 h-20 text-3xl text-white duration-500 border-none rounded-full hover:bg-secondary-color-light bg-secondary-color-base w-29 btn-icon border-1"
+      >
+        <IconCall />
+      </button>
     </div>
   </main>
 </template>
@@ -37,9 +49,6 @@ import { defineComponent } from "vue";
 // IMPORT COMPONENTS
 import ButtonNumber from "../components/ButtonNumbers.vue";
 
-import ButtonAdd from "../components/ButtonAdd.vue";
-import ButtonCall from "../components/ButtonCall.vue";
-import ButtonBackSpace from "../components/ButtonBackSpace.vue";
 import IconCall from "~icons/material-symbols/call";
 import ButtonIcon from "../components/ButtonIcon.vue";
 import IconAsterisk from "~icons/streamline/computer-keyboard-asterisk-2-asterisk-star-keyboard";
@@ -48,9 +57,6 @@ import IconHash from "~icons/ph/hash-straight-bold";
 export default defineComponent({
   components: {
     ButtonNumber,
-    ButtonAdd,
-    ButtonCall,
-    ButtonBackSpace,
     IconCall,
     ButtonIcon,
     IconAsterisk,
@@ -74,5 +80,11 @@ export default defineComponent({
   grid-template-columns: repeat(3, auto);
   justify-content: space-between;
   row-gap: 1.5rem;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

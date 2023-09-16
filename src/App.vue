@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center h-screen bg-background-theme-color">
+  <div class="flex items-center h-screen bg-secondary-color-base">
     <RouterView />
   </div>
 </template>

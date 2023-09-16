@@ -43,7 +43,7 @@
       <button
         :disabled="isNumberEmpty"
         @click="deleteLastDigit"
-        class="border-none"
+        class="border-none disabled:bg-gray-color-light disabled:text-white"
       >
         <IconBackspace />
       </button>

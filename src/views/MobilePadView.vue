@@ -13,7 +13,12 @@
     <!-- GRID CONTAINER -->
     <div class="grid justify-between grid-cols-3 m-auto max-w-xxs gap-y-6">
       <!-- BTNS NUMBERS FROM 1-9 -->
-      <ButtonNumber v-for="number in numbers" :key="number" :name="number" />
+      <ButtonNumber
+        v-on:set-child-data="updateParent"
+        v-for="number in numbers"
+        :key="number"
+        :name="number"
+      />
 
       <!-- BTN ASTERISK -->
       <ButtonIcon>
@@ -73,7 +78,13 @@ export default defineComponent({
   data() {
     return {
       numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      phoneNumber: "",
     };
+  },
+  methods: {
+    updateParent(data: string) {
+      console.log(data);
+    },
   },
 });
 </script>

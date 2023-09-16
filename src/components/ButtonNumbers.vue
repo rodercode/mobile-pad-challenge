@@ -1,5 +1,5 @@
 <template>
-  <button>
+  <button @click="click">
     {{ name }}
   </button>
 </template>
@@ -9,6 +9,11 @@ export default defineComponent({
   props: {
     name: {
       type: String,
+    },
+  },
+  methods: {
+    click(event: any) {
+      this.$emit("set-child-data", event.target.innerHTML);
     },
   },
 });

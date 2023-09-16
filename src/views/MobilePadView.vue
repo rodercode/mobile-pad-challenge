@@ -4,7 +4,7 @@
     <!-- HEADER -->
     <header class="mb-8">
       <!-- PHONE NUMBER -->
-      <h1 class="text-3xl text-center">0748 869 733</h1>
+      <h1 class="text-3xl text-center">{{ phoneNumber }}</h1>
 
       <!-- FULLNAME  -->
       <p class="text-lg text-center">Larry Black</p>
@@ -14,7 +14,7 @@
     <div class="grid justify-between grid-cols-3 m-auto max-w-xxs gap-y-6">
       <!-- BTNS NUMBERS FROM 1-9 -->
       <ButtonNumber
-        v-on:set-child-data="updateParent"
+        v-on:set-number="updatePhoneNumber"
         v-for="number in numbers"
         :key="number"
         :name="number"
@@ -26,7 +26,7 @@
       </ButtonIcon>
 
       <!-- BTN NUMBER 0 -->
-      <ButtonNumber name="0" />
+      <ButtonNumber v-on:set-number="updatePhoneNumber" name="0" />
 
       <!-- BTN HASH -->
       <ButtonIcon>
@@ -82,8 +82,8 @@ export default defineComponent({
     };
   },
   methods: {
-    updateParent(data: string) {
-      console.log(data);
+    updatePhoneNumber(digit: string) {
+      this.phoneNumber += digit;
     },
   },
 });

@@ -1,5 +1,5 @@
 <template>
-  <button @click="click">
+  <button @click="handleButtonClick">
     {{ name }}
   </button>
 </template>
@@ -12,8 +12,8 @@ export default defineComponent({
     },
   },
   methods: {
-    click(event: any) {
-      this.$emit("set-child-data", event.target.innerHTML);
+    handleButtonClick(event: any) {
+      this.$emit("set-number", event.target.innerHTML);
     },
   },
 });

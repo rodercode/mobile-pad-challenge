@@ -40,7 +40,11 @@
       </button>
 
       <!-- BTN BACKSPACE -->
-      <button disabled="" @click="deleteLastDigit" class="border-none">
+      <button
+        :disabled="phoneNumber.length <= 0"
+        @click="deleteLastDigit"
+        class="border-none"
+      >
         <IconBackspace />
       </button>
     </div>
@@ -76,6 +80,7 @@ export default defineComponent({
     return {
       numbers: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
       phoneNumber: "",
+      numberIsEmpty: true,
     };
   },
   methods: {

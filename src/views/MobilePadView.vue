@@ -5,9 +5,6 @@
     <header class="mb-8">
       <!-- PHONE NUMBER -->
       <h1 class="h-8 text-3xl text-center">{{ phoneNumber }}</h1>
-
-      <!-- FULLNAME  -->
-      <p class="text-lg text-center">Larry Black</p>
     </header>
 
     <!-- GRID CONTAINER -->
@@ -43,7 +40,7 @@
       </button>
 
       <!-- BTN BACKSPACE -->
-      <button class="border-none">
+      <button disabled="" @click="deleteLastDigit" class="border-none">
         <IconBackspace />
       </button>
     </div>
@@ -84,6 +81,12 @@ export default defineComponent({
   methods: {
     updatePhoneNumber(digit: string) {
       this.phoneNumber += digit;
+    },
+    deleteLastDigit() {
+      if (this.phoneNumber.length > 0) {
+        console.log("Delete last digit");
+        this.phoneNumber = this.phoneNumber.slice(0, -1);
+      }
     },
   },
 });

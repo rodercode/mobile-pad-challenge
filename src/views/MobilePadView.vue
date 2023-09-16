@@ -39,6 +39,11 @@
       >
         <IconCall />
       </button>
+      <button
+        class="w-20 h-20 text-3xl duration-500 border-none rounded-full hover:bg-primary-color-base w-29 btn-icon border-1 hover:text-white"
+      >
+        <IconBackspace />
+      </button>
     </div>
   </main>
 </template>
@@ -46,21 +51,27 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-// IMPORT COMPONENTS
+// IMPORT BUTTONS COMPONENTS
 import ButtonNumber from "../components/ButtonNumbers.vue";
-
-import IconCall from "~icons/material-symbols/call";
 import ButtonIcon from "../components/ButtonIcon.vue";
+
+// IMPORT ICONS COMPONENTS
+import IconCall from "~icons/material-symbols/call";
 import IconAsterisk from "~icons/streamline/computer-keyboard-asterisk-2-asterisk-star-keyboard";
 import IconHash from "~icons/ph/hash-straight-bold";
+import IconBackspace from "~icons/material-symbols/backspace-rounded";
 
 export default defineComponent({
   components: {
+    // BUTTONS COMPONENTS
     ButtonNumber,
-    IconCall,
     ButtonIcon,
+
+    // ICONS COMPONENTS
+    IconCall,
     IconAsterisk,
     IconHash,
+    IconBackspace,
   },
   name: "HomeView",
   data() {

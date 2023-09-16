@@ -41,7 +41,7 @@
 
       <!-- BTN BACKSPACE -->
       <button
-        :disabled="phoneNumber.length <= 0"
+        :disabled="isNumberEmpty"
         @click="deleteLastDigit"
         class="border-none"
       >
@@ -80,8 +80,13 @@ export default defineComponent({
     return {
       numbers: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
       phoneNumber: "",
-      numberIsEmpty: true,
+      isNumberEmpty: true,
     };
+  },
+  watch: {
+    phoneNumber() {
+      this.isNumberEmpty = this.phoneNumber.length === 0;
+    },
   },
   methods: {
     updatePhoneNumber(digit: string) {

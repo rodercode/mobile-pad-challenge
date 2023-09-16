@@ -31,10 +31,10 @@
       </ButtonIcon>
 
       <!-- BTN PLUS -->
-      <button class="text-5xl border-none">+</button>
+      <button class="text-5xl border-none component-btn">+</button>
       <!-- BTN CALL -->
       <button
-        class="text-white border-none bg-secondary-color-base hover:bg-secondary-color-light"
+        class="text-white border-none component-btn bg-secondary-color-base hover:bg-secondary-color-light"
       >
         <IconCall />
       </button>
@@ -43,7 +43,7 @@
       <button
         :disabled="isNumberEmpty"
         @click="deleteLastDigit"
-        class="border-none disabled:bg-gray-color-light disabled:text-white"
+        class="border-none component-btn disabled:bg-gray-color-light disabled:text-white"
       >
         <IconBackspace />
       </button>
@@ -79,6 +79,7 @@ export default defineComponent({
   data() {
     return {
       numbers: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+      letters: ["", "ABC", "DEF", "GHI", "JKL", "MNO", "PQS", "TUV", "XYZ"],
       phoneNumber: "",
       isNumberEmpty: true,
     };

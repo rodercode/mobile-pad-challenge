@@ -1,5 +1,5 @@
 <template>
-  <button @click="handleButtonClick">
+  <button class="component-btn" @click="handleButtonClick">
     {{ name }}
   </button>
 </template>
@@ -11,6 +11,7 @@ export default defineComponent({
       type: String,
     },
   },
+
   methods: {
     handleButtonClick(event: any) {
       this.$emit("set-number", event.target.innerHTML);

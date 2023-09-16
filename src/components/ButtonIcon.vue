@@ -1,5 +1,5 @@
 <template>
-  <button @click="handleButtonClick">
+  <button class="component-btn" @click="handleButtonClick">
     <slot>
       {{ name }}
     </slot>

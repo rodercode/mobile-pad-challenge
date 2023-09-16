@@ -1,6 +1,6 @@
 <template>
   <!-- HOME -->
-  <main class="py-12 m-auto bg-white home">
+  <main class="py-12 m-auto bg-white home rounded-xl">
     <!-- HEADER -->
     <header class="mb-8">
       <!-- PHONE NUMBER -->
@@ -15,13 +15,18 @@
       <!-- BTN NUMBERS 1-9 -->
       <ButtonNumber v-for="number in numbers" :key="number" :name="number" />
 
-      <ButtonAsterisk />
+      <!-- BTN ASTERISK -->
+      <ButtonIcon>
+        <IconAsterisk />
+      </ButtonIcon>
+
       <!-- BTN NUMBER 0 -->
       <ButtonNumber name="0" />
-      <ButtonHash />
-      <ButtonAdd />
-      <ButtonCall />
-      <ButtonBackSpace />
+
+      <!-- BTN HASH -->
+      <ButtonIcon>
+        <IconHash />
+      </ButtonIcon>
     </div>
   </main>
 </template>
@@ -31,20 +36,25 @@ import { defineComponent } from "vue";
 
 // IMPORT COMPONENTS
 import ButtonNumber from "../components/ButtonNumbers.vue";
-import ButtonHash from "../components/ButtonHash.vue";
-import ButtonAsterisk from "../components/ButtonAsterisk.vue";
+
 import ButtonAdd from "../components/ButtonAdd.vue";
 import ButtonCall from "../components/ButtonCall.vue";
 import ButtonBackSpace from "../components/ButtonBackSpace.vue";
+import IconCall from "~icons/material-symbols/call";
+import ButtonIcon from "../components/ButtonIcon.vue";
+import IconAsterisk from "~icons/streamline/computer-keyboard-asterisk-2-asterisk-star-keyboard";
+import IconHash from "~icons/ph/hash-straight-bold";
 
 export default defineComponent({
   components: {
     ButtonNumber,
-    ButtonHash,
-    ButtonAsterisk,
     ButtonAdd,
     ButtonCall,
     ButtonBackSpace,
+    IconCall,
+    ButtonIcon,
+    IconAsterisk,
+    IconHash,
   },
   name: "HomeView",
   data() {
@@ -63,7 +73,6 @@ export default defineComponent({
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: space-between;
-  row-gap: 1rem;
-  border: 1px solid black;
+  row-gap: 1.5rem;
 }
 </style>

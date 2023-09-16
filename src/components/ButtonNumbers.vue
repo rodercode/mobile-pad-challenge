@@ -1,6 +1,6 @@
 <template>
   <button
-    class="w-20 h-20 text-3xl border-black rounded-full w-29 btn-icon border-1"
+    class="w-20 h-20 text-3xl duration-500 rounded-full border-primary-color-light hover:bg-primary-color-base w-29 btn-icon border-1 hover:text-white"
   >
     {{ name }}
   </button>

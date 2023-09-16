@@ -19,6 +19,9 @@
       <!-- BTN NUMBER 0 -->
       <ButtonNumber name="0" />
       <ButtonHash />
+      <ButtonAdd />
+      <ButtonCall />
+      <ButtonBackSpace />
     </main>
   </div>
 </template>
@@ -30,12 +33,18 @@ import { defineComponent } from "vue";
 import ButtonNumber from "../components/ButtonNumbers.vue";
 import ButtonHash from "../components/ButtonHash.vue";
 import ButtonAsterisk from "../components/ButtonAsterisk.vue";
+import ButtonAdd from "../components/ButtonAdd.vue";
+import ButtonCall from "../components/ButtonCall.vue";
+import ButtonBackSpace from "../components/ButtonBackSpace.vue";
 
 export default defineComponent({
   components: {
     ButtonNumber,
     ButtonHash,
     ButtonAsterisk,
+    ButtonAdd,
+    ButtonCall,
+    ButtonBackSpace,
   },
   name: "HomeView",
   data() {

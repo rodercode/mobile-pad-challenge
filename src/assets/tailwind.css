@@ -24,6 +24,6 @@
 
 @layer components {
   .component-btn {
-    @apply flex items-center justify-center w-20 h-20 text-3xl duration-500 rounded-full border-primary-color-base hover:bg-primary-color-base border-1 hover:text-white;
+    @apply flex items-center justify-center w-20 h-20 text-3xl duration-300 rounded-full border-primary-color-base hover:bg-primary-color-base border-1 hover:text-white;
   }
 }
